@@ -18,5 +18,15 @@
   "bugs": {
     "url": "https://github.com/chrisjamesr/react-boilerplate/issues"
   },
-  "homepage": "https://github.com/chrisjamesr/react-boilerplate#readme"
+  "homepage": "https://github.com/chrisjamesr/react-boilerplate#readme",
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0"
+  }
 }
