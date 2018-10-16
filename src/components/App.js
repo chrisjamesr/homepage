@@ -1,11 +1,20 @@
 import React from 'react'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import SidebarComponent from './Sidebar/SidebarComponent'
+import MainComponent from './Main/MainComponent'
+
+
+import "../styles/App.scss"
 
 class App extends React.Component {
   render(){
     return(
-      <div>
-        <h1>Welcome to My Starter App</h1>
-      </div>  
+      <Router>       
+        <div id="app" >     
+          <SidebarComponent/>
+          <MainComponent/>                
+        </div>  
+      </Router>
     )
   }
 }
