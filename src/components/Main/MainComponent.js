@@ -5,20 +5,15 @@ import About from './About'
 import Projects from './Projects'
 import Misc from './Misc'
 import Blog from './Blog'
+import '../../styles/Main.scss'
 
 
-class MainComponent extends React.Component{
-  render(){
-    return(
-      <main>
-        <Route path="/about" component={About}/>
-        <Route path="/projects" component={Projects}/>
-        <Route path="/misc" component={Misc}/>
-        <Route path="/blog" component={Blog}/>
-        <Route exact path="/" component={Home}/>
-      </main>
-    )
-  }
+const MainComponent = ({match}) => {
+  return(
+    <main>
+      <h1>{match.path}</h1> 
+    </main>
+  )
 }
 
 export default MainComponent

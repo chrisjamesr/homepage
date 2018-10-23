@@ -6,5 +6,5 @@ import './styles/App.scss'
 
 ReactDOM.render(
   <App />,
-  document.getElementById('page')
+  document.getElementById('app')
 )

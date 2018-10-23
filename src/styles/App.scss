@@ -1,29 +1,53 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: black;
-  background: white;
+@import url('https://fonts.googleapis.com/css?family=Chivo|Overpass');
+@import 'variables.scss';
+
+html{
   height: 100%;
 }
 
-div#app {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-end;
-  height: 100vh;
+body {
+  font-family: 'Overpass', sans-serif;
+  color: rgb(119,201,212);
+  background: #ECF0F2;
+  height: 100%;  
+  margin: 0;
+  overflow: hidden;
 }
 
-main{
-  width: 100%;
+#app > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
   height: 100vh;
-  padding: 0 2.5%;
+  padding: 5% 15% 5% 10%;
+  h1{
+    font-size: 1.6rem;
+    letter-spacing: .15rem;
+  }
+}
+
+ aside {
+  height: 100vh;
+  text-align: center;
+  width: 40%;
+  // padding-right: 5%; 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  flex: 0 1 2;
+  align-items: stretch;  
+  flex-basis: 30%;
+}
+
+main {
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   overflow: auto;
 }
+
+
 
 section {
   text-align: center;
@@ -31,3 +55,100 @@ section {
   width: 100%;
   flex: 0 0 auto;
 }
+
+@media (max-width: #{$break-point-lg-tablet}){
+    #app > div {
+    flex-direction: column;
+    padding-top: 1%;
+
+  }
+  
+  aside {
+    flex-wrap: nowrap;
+    padding-bottom: 2.5%;
+    margin-bottom: 1em;
+    height: auto;
+    width: 100%;    
+    flex-basis:auto;
+    h1 {
+      margin: 0
+    }
+    nav {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 1% 0;
+      height: auto;
+    }
+    footer {
+      padding: 0;
+      height: auto;
+    }
+  } 
+  main {
+    width: 100%;  
+
+    > div {
+      // display:flex;
+      // width: 100%;
+      // flex-direction: column;
+      // justify-content: flex-start;
+      // align-items:stretch;
+      // flex-grow:1;
+      // overflow: inherit;
+      // margin-top:0;  
+    }
+    img {
+      height: 150px;
+      float: left;
+      padding-right: 5% ;
+      align-self: center;
+    }
+  }
+} 
+
+@media (max-width: #{$break-point-phone}){
+  
+  #app > div {
+    flex-direction: column;
+  }
+  
+  aside {
+    flex-wrap: nowrap;
+    padding-bottom: 2.5%;
+    margin-bottom: 1em;
+    height: auto;
+    width: 100%;    
+    flex-basis:auto;
+    h1 {
+      margin: 0
+    }
+    nav {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 1% 0;
+      height: auto;
+    }
+    footer {
+      padding: 0;
+      height: auto;
+    }
+  } 
+  main {
+    width: 100%;  
+    // border-top: 2.5px solid rgb(119,201,212);
+    > div {
+      // display:flex;
+      // width: 100%;
+      // flex-direction: column;
+      // justify-content: flex-start;
+      // align-items:stretch;
+      // flex-grow:1;
+    }
+    img {
+      height: 100px;
+      margin: 0;
+      align-self: center;
+    }
+  }
+}
+
