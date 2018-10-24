@@ -1,7 +1,8 @@
 {
-  "name": "react-boilerplate",
+  "name": "personal-site",
   "version": "1.0.0",
-  "description": "## Instructions   'npm install'   'npm start'",
+  "private": true,
+  "description": "Personal Site",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -10,22 +11,20 @@
     "build": "webpack --config webpack.prod.js",
     "start": "webpack-dev-server --config webpack.dev.js",
     "test": "jest ./test",
-    "deploy": "surge ./Users/chris/desktop/projects/homepage chrisrudolph.nyc"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chrisjamesr/react-boilerplate.git"
-  },
-  "author": "",
+  "author": "Chris Rudolph",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/chrisjamesr/react-boilerplate/issues"
   },
-  "homepage": "https://github.com/chrisjamesr/react-boilerplate#readme",
+  "homepage": "https://chrisjamesr.github.io/homepage",
   "dependencies": {
     "ajv": "^6.5.4",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
+    "gh-pages": "^2.0.1",
     "less": "^3.8.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -54,8 +53,7 @@
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9",
-    "webpack-merge": "^4.1.4",
-    "surge": "latest"
+    "webpack-merge": "^4.1.4"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "./test/enzyme.setup.js"
