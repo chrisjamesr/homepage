@@ -33,8 +33,8 @@ module.exports = {
         test: /\.(jpeg|svg)$/i, 
         include: '/public',
         use: {
-          loader: "file-loader?name=/public/[name].[ext]",
-          options :{
+          loader: "file-loader",
+          options : {
             name: '[path][name].[ext]',
             outputPath: '/dist/public'
           }
