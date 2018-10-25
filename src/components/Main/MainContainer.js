@@ -50,9 +50,9 @@ class MainContainer extends React.Component{
       <main>      
 
       { 
-        this.renderRoutes()
-        
+        this.renderRoutes()        
       }
+      <Route path="/" exact component={Home}/>
       </main>
     )
   }
