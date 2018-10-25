@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js && echo '/*    /index.html    200' > build/_redirects",
     "start": "webpack-dev-server --config webpack.dev.js",
     "test": "jest ./test"
   },
