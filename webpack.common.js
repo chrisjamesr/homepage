@@ -28,6 +28,10 @@ module.exports = {
         },{
           loader: 'sass-loader'
         }],
+      },
+      {
+        test: /\.(jpe?g|svg)$/i, 
+        loader: "file-loader?name=/public/[name].[ext]"
       }
     ]
   },
