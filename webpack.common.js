@@ -30,8 +30,15 @@ module.exports = {
         }],
       },
       {
-        test: /\.(jpe?g|svg)$/i, 
-        loader: "file-loader?name=/public/[name].[ext]"
+        test: /\.(jpeg|svg)$/i, 
+        include: '/public',
+        use: {
+          loader: "file-loader?name=/public/[name].[ext]",
+          options :{
+            name: '[path][name].[ext]',
+            outputPath: '/dist/public'
+          }
+        }
       }
     ]
   },
