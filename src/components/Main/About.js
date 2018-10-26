@@ -6,7 +6,7 @@ const About = ({match}) =>{
   return (
     <div>
       <h1>ABOUT</h1>
-      <img src="../../public/selfie.jpg"/>
+      <img src={selfie}/>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
          sed do eiusmod tempor incididunt ut labore et dolore magna 
