@@ -31,12 +31,11 @@ module.exports = {
       },
       {
         test: /\.(jpeg|svg)$/i, 
-        include: '/public',
         use: {
           loader: "file-loader",
           options : {
-            name: '[path][name].[ext]',
-            outputPath: '/dist/public'
+            name: '[path][name].[ext]'
+            // outputPath: '/dist/images'
           }
         }
       }
