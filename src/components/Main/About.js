@@ -1,5 +1,5 @@
 import React from 'react'
-// import instaSVG from '../../images/selfie.jpg'
+import selfie from '../../images/selfie.jpg'
 
 const About = ({match}) =>{
   // const imgStyle = {height: 215, paddingTop: "2%"}
