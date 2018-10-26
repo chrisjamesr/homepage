@@ -8,6 +8,18 @@ module.exports = merge(common,{
     port: 3000, 
     open: true,
     historyApiFallback: true
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(pdf|jpg|png|gif|svg|ico)$/,
+          use: [
+              {
+                  loader: 'url-loader'
+              },
+          ]
+      }
+    ]
   }
 })
   
