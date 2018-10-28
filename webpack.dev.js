@@ -8,18 +8,23 @@ module.exports = merge(common,{
     port: 3000, 
     open: true,
     historyApiFallback: true
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(pdf|jpg|png|gif|svg|ico)$/,
-          use: [
-              {
-                  loader: 'url-loader'
-              },
-          ]
-      }
-    ]
   }
+  // ,
+  // module: {
+  //   rules: [
+  //     {
+  //       test: /\.(jpg|svg)$/,
+  //         use: [
+  //             {
+  //               loader: 'url-loader',
+  //               options : {
+  //                 name: '[path][name].[ext]'
+  //                 // publicPath: '/dist/images'
+  //               }
+  //             },
+  //         ]
+  //     } 
+  //   ]
+  // }
 })
   
