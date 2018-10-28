@@ -33,9 +33,9 @@ module.exports = {
         test: /\.(jpg|svg)$/,
         use: [
             {
-              loader: 'url-loader',
+              loader: 'file-loader',
               options : {
-                limit: 5000,
+                // limit: 5000,
                 name: '[path][name].[ext]'
                 // publicPath: '/dist/images'
               }
