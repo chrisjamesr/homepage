@@ -8,7 +8,7 @@ import "../styles/App.scss"
 class App extends React.Component {
   render(){
     return(
-      <Router>       
+      <Router basename={'/'}>       
         <div>                
           <SidebarComponent/>
           <MainContainer/>                
