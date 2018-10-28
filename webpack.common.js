@@ -28,16 +28,6 @@ module.exports = {
         },{
           loader: 'sass-loader'
         }],
-      },
-      {
-        test: /\.(jpeg|svg)$/i, 
-        use: {
-          loader: "file-loader",
-          options : {
-            name: '[path][name].[ext]'
-            // outputPath: '/dist/images'
-          }
-        }
       }
     ]
   },
