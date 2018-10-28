@@ -9,8 +9,8 @@ module.exports = {
   output: {
     filename: '[name].[hash].js',
     path: path.resolve('./dist'),
-    publicPath: '/',
-    filename: "bundle.js"
+    filename: "bundle.js",
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -28,7 +28,20 @@ module.exports = {
         },{
           loader: 'sass-loader'
         }],
-      }
+      },
+      {
+        test: /\.(jpg|svg)$/,
+        use: [
+            {
+              loader: 'url-loader',
+              options : {
+                limit: 5000,
+                name: '[path][name].[ext]'
+                // publicPath: '/dist/images'
+              }
+            },
+        ]
+      } 
     ]
   },
   plugins: [
