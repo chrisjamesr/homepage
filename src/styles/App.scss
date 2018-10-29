@@ -19,7 +19,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  height: 100vh;
+  height: 90vh;
   padding: 5% 15% 5% 10%;
   h1{
     font-size: 1.6rem;
@@ -59,17 +59,18 @@ section {
 @media (max-width: #{$break-point-lg-tablet}){
     #app > div {
     flex-direction: column;
-    padding-top: 1%;
+    padding: 1% 10% 5%;
+    // align-items: stretch;
 
   }
   
   aside {
     flex-wrap: nowrap;
     padding-bottom: 2.5%;
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
     height: auto;
     width: 100%;    
-    flex-basis:auto;
+    flex-basis:15%;
     h1 {
       margin: 0
     }
@@ -80,8 +81,9 @@ section {
       height: auto;
     }
     footer {
-      padding: 0;
-      height: auto;
+      padding: 2% 2% 0 2%;
+      // align-items: flex-start;
+      height: 41px;
     }
   } 
   main {
@@ -109,13 +111,13 @@ section {
 @media (max-width: #{$break-point-phone}){
   
   #app > div {
-    flex-direction: column;
+    // flex-direction: column;
   }
   
   aside {
     flex-wrap: nowrap;
     padding-bottom: 2.5%;
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
     height: auto;
     width: 100%;    
     flex-basis:auto;
@@ -129,8 +131,8 @@ section {
       height: auto;
     }
     footer {
-      padding: 0;
-      height: auto;
+      // padding: 0;
+      // height: auto;
     }
   } 
   main {
