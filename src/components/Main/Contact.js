@@ -34,13 +34,13 @@ class Contact extends React.Component {
       <div>
         <h1>Contact Me</h1>
         <form onSubmit={this.onSubmit} 
-          //{
-            //action="https://formspree.io/chrisjames.r@gmail.com"
-          //}
+              action="https://formspree.io/chrisjames.r@gmail.com"
+              method="POST"
+              name="contact-form"
           >
           <div>
             <label>Name:</label> 
-            <input onChange={this.onChange} autoFocus name="name" type="textbox" value={this.state.name} />
+            <input onChange={this.onChange} autoFocus name="name" type="text" value={this.state.name} />
           </div>
           <div>
             <label>Email:</label> 
