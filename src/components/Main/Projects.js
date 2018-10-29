@@ -5,6 +5,7 @@ const Projects = () =>{
     <div>
       <h1>PROJECTS</h1>
       <p>
+        THIS IS A TEST
         Tortor condimentum lacinia quis vel eros donec ac odio tempor. Nunc sed augue 
         lacus viverra vitae congue eu consequat ac. At elementum eu facilisis sed odio 
         morbi quis. Id donec ultrices tincidunt arcu non sodales neque sodales ut. Elit 
