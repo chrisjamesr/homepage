@@ -35,7 +35,6 @@ module.exports = {
             {
               loader: 'file-loader',
               options : {
-                // limit: 5000,
                 name: '[path][name].[ext]'
                 // publicPath: '/dist/images'
               }
@@ -49,5 +48,7 @@ module.exports = {
       template: 'index.html'
     }),
     new CleanWebpackPlugin(['dist'])
+  ]
+}eanWebpackPlugin(['dist'])
   ]
 }
