@@ -1,5 +1,6 @@
 import React from 'react'
-import {Route} from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
+import { withRouter } from 'react-router'
 import Home from './Home'
 import About from './About'
 import Projects from './Projects'
@@ -12,8 +13,7 @@ import {routes} from '../../lib/routes'
 const components = {
     about: About,
     projects: Projects,
-    contact:Contact,
-    home: Home
+    contact:Contact
   }
 
 class MainContainer extends React.Component{
@@ -41,7 +41,7 @@ class MainContainer extends React.Component{
         <Route 
           key = {i}
           path = {"/"+key} 
-          render= {()=> <ComponentName />}
+          render= {()=> <ComponentName {...this.props}/>}
         />
       )  
     })
@@ -50,14 +50,15 @@ class MainContainer extends React.Component{
   render(){
     return(
       <main>      
-
-      { 
-        this.renderRoutes()        
-      }
-      <Route path="/" exact component={Home}/>
+        <Switch>
+        { 
+          this.renderRoutes()        
+        }
+        <Route path="/" exact component={Home}/>
+      </Switch>
       </main>
     )
   }
 }
 
-export default MainContainer
+export default withRouter(MainContainer)
