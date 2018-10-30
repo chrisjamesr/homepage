@@ -6,6 +6,7 @@ class Contact extends React.Component {
     this.state = {
       name: '',
       email: '',
+      subject: '',
       message: ''
     }
   }
@@ -43,6 +44,10 @@ class Contact extends React.Component {
           <div>
             <label>Email:</label> 
             <input onChange={this.onChange} name="email" type="email" value={this.state.email} />
+          </div>
+          <div>
+            <label>Subject:</label> 
+            <input onChange={this.onChange} name="subject" type="text" value={this.state.subject} />
           </div>  
           <div>
             <label>Message:</label>
