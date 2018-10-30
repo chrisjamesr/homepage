@@ -1,7 +1,7 @@
 import React from 'react'
 
 class Contact extends React.Component {
-  constructor(props){
+  constructor(props, {history}){
     super(props)
     this.state = {
       name: '',
@@ -18,13 +18,11 @@ class Contact extends React.Component {
   }
 
   onSubmit = (event) => {
-    event.preventDefault()
-    console.log("props: ", this.props)
-    console.log("state: ", this.state) 
+    // event.preventDefault()  
     this.renderModal()
     setTimeout(()=>this.props.history.push("/about"), 1500)
-    
   }
+  
   renderModal = () =>{
     console.log("MODAL")
   }
@@ -34,8 +32,8 @@ class Contact extends React.Component {
       <div>
         <h1>Contact Me</h1>
         <form onSubmit={this.onSubmit} 
-              action="https://formspree.io/chrisjames.r@gmail.com"
-              method="POST"
+              // action="https://formspree.io/chrisjames.r@gmail.com"
+              // method="POST"
               name="contact-form"
           >
           <div>
