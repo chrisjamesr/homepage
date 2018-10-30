@@ -9,7 +9,8 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js && echo '/*    /index.html    200' > dist/_redirects",
     "start": "webpack-dev-server --config webpack.dev.js",
-    "test": "jest ./test"
+    "test": "jest ./test",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Chris Rudolph",
   "license": "ISC",
