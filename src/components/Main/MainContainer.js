@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import { withRouter } from 'react-router'
 import Home from './Home'
 import About from './About'
-import Projects from './Projects'
+import ProjectsContainer from './ProjectsContainer'
 import Misc from './Misc'
 import Blog from './Blog'
 import Contact from './Contact'
@@ -12,7 +12,7 @@ import {routes} from '../../lib/routes'
 
 const components = {
     about: About,
-    projects: Projects,
+    projects: ProjectsContainer,
     contact:Contact
   }
 
