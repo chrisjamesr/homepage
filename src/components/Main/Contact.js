@@ -32,8 +32,8 @@ class Contact extends React.Component {
       <div>
         <h1>Contact Me</h1>
         <form onSubmit={this.onSubmit} 
-              // action="https://formspree.io/chrisjames.r@gmail.com"
-              // method="POST"
+              action="https://formspree.io/chrisjames.r@gmail.com"
+              method="POST"
               name="contact-form"
           >
           <div>
