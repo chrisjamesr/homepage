@@ -1,9 +1,9 @@
 import React from 'react' 
 import { NavLink, Link } from 'react-router-dom'
 import "../../styles/Sidebar.scss"
-import twitter from '../../../images/twitter.svg'
-import linkedin from '../../../images/linkedin.svg'
-import insta from '../../../images/insta.svg'
+import twitter from '../../../images/icons/twitter.svg'
+import linkedin from '../../../images/icons/linkedin.svg'
+import insta from '../../../images/icons/insta.svg'
 
 class SidebarComponent extends React.Component {
   render(){
