@@ -57,6 +57,10 @@ footer {
   height: 35px;
 }
 
+.icon-sm {
+  height: 20px;
+}
+
 @media (max-width: #{$break-point-lg-tablet}){
   .icon {
     height: 20px;
