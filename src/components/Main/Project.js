@@ -1,34 +1,46 @@
 import React from 'react'
 // import github from '../../../images/icons/github.svg'
 import github from '../../../images/icons/iconmonstr-github.svg'
+import globe from '../../../images/icons/iconmonstr-globe.svg'
+
+import '../../styles/project.scss'
 
 const Project = ({project}) => {
-  const projectTileStyle = {
-      width: "90%",
-      border: "1px solid black",
-      alignSelf: "center",
-      margin: "5% auto",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "flexStart"
-    }
-  
   return (
-    <div className="project-tile"
-         style={projectTileStyle}
-    >
-      <h3 style={{alignSelf: "center", margin:".5em auto"}}>{project.name}</h3>
-      <div className="projectBody" style={{padding: "0 5%"}}>
-        <p>
-          <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
-            <img alt="Instagram Icon"className="icon" src={github}/>
-          </a>
-        </p>
-        
-        { !!project.url ? <p><a href={project.url}>Live Link</a></p> : null}
+    <div className="project-tile">
+
+      <h2>
+        {project.name}
+      </h2>
+
+      <div className="project-body">
+
         <p>{project.description}</p>
 
       </div>
+
+      <div className="project-links">
+
+        <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+          <img alt="Github Icon" 
+               title="Github Repo"
+               className="icon-sm" 
+               src={github}
+          />
+        </a>
+
+        { 
+          !!project.url ? 
+          <a href={project.url}><img alt="Globe Icon" 
+                                     className="icon-sm" 
+                                     src={globe} 
+                                     title="Live Site"
+                                     /></a>
+          : null
+        }
+
+      </div>
+
     </div>
   )
 }
