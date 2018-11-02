@@ -10,10 +10,13 @@ import Contact from './Contact'
 import '../../styles/Main.scss'
 import {routes} from '../../lib/routes'
 
+import ColorComponent from '../ColorComponent'
+
 const components = {
     about: About,
     projects: ProjectsContainer,
-    contact:Contact
+    contact:Contact,
+    colors: ColorComponent
   }
 
 class MainContainer extends React.Component{
