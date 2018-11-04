@@ -8,8 +8,8 @@ export const projects = () => {
     },
     {
       name: "Recipe App",
-      url: "https://github.com/chrisjamesr/recipe_js_app",
-      repoUrl: "https://recipes-js-app.herokuapp.com/",
+      url: "https://recipes-js-app.herokuapp.com/",
+      repoUrl: "https://github.com/chrisjamesr/recipe_js_app",
       description: "Rails MVC application with JQuery for sharing recipes.",
     },
     { name: "CityBird Sighting Logger",
