@@ -1,5 +1,4 @@
 import React from 'react'
-// import github from '../../../images/icons/github.svg'
 import github from '../../../images/icons/iconmonstr-github.svg'
 import globe from '../../../images/icons/iconmonstr-globe.svg'
 
@@ -31,12 +30,13 @@ const Project = ({project}) => {
 
         { 
           !!project.url ? 
-          <a href={project.url}><img alt="Globe Icon" 
-                                     className="icon-sm" 
-                                     src={globe} 
-                                     title="Live Site"
-                                     /></a>
-          : null
+          <a href={project.url} target="_blank" rel="noopener noreferrer">
+            <img alt="Globe Icon" 
+                 className="icon-sm" 
+                 src={globe} 
+                 title="Live Site"
+                 />
+          </a> : null
         }
 
       </div>
