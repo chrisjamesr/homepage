@@ -14,8 +14,7 @@ class SidebarComponent extends React.Component {
         </div>        
         <nav>
           <NavLink to="/about">About</NavLink>
-          <NavLink to="/projects">Projects</NavLink>
-          
+          <NavLink to="/projects">Projects</NavLink>          
           <NavLink to="/contact">Contact</NavLink>          
         </nav>
         <footer id="social">
