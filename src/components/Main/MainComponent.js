@@ -1,18 +1,42 @@
 import React from 'react'
-import {Route} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import Home from './Home'
 import About from './About'
 import Projects from './Projects'
 import Misc from './Misc'
 import Blog from './Blog'
+import Contact from './Contact'
+import ColorComponent from '../ColorComponent'
+import ProjectsContainer from './ProjectsContainer'
 import '../../styles/Main.scss'
 
+const MainComponent = ({history}) => {
 
-const MainComponent = ({match}) => {
+  const components = {
+    about: About,
+    projects: ProjectsContainer,
+    contact:Contact,
+    colors: ColorComponent,
+    home: Home
+  }
+
+  const renderRoutes = () => {
+    return Object.keys(components).map( (key,i) => {   
+      const ComponentName = components[key]
+      return (
+        <Route 
+          key = {i}
+          path = {"/"+key} 
+          component= {ComponentName}
+        />
+      )  
+    })
+  }
+
   return(
-    <main>
-      <h1>{match.path}</h1> 
-    </main>
+    <div>
+      { renderRoutes() }
+    </div>
   )
 }
 
