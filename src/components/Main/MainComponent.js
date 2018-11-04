@@ -7,14 +7,13 @@ import Misc from './Misc'
 import Blog from './Blog'
 import Contact from './Contact'
 import ColorComponent from '../ColorComponent'
-import ProjectsContainer from './ProjectsContainer'
 import '../../styles/Main.scss'
 
 const MainComponent = ({history}) => {
 
   const components = {
     about: About,
-    projects: ProjectsContainer,
+    projects: Projects,
     contact:Contact,
     colors: ColorComponent,
     home: Home
