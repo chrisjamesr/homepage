@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import { withRouter } from 'react-router'
+import MainComponent from './MainComponent'
 import Home from './Home'
 import About from './About'
 import ProjectsContainer from './ProjectsContainer'
@@ -16,7 +16,8 @@ const components = {
     about: About,
     projects: ProjectsContainer,
     contact:Contact,
-    colors: ColorComponent
+    colors: ColorComponent,
+    home: Home
   }
 
 class MainContainer extends React.Component{
@@ -34,7 +35,7 @@ class MainContainer extends React.Component{
 
   componentName(key) {
     const ComponentName = components[key]
-    return <ComponentName />;
+    return <ComponentName {...props}/>;
   }
 
   renderRoutes = () => {
@@ -44,7 +45,7 @@ class MainContainer extends React.Component{
         <Route 
           key = {i}
           path = {"/"+key} 
-          render= {()=> <ComponentName {...this.props}/>}
+          render= {(props)=> <ComponentName {...this.props}/>}
         />
       )  
     })
@@ -52,16 +53,11 @@ class MainContainer extends React.Component{
 
   render(){
     return(
-      <main>      
-        <Switch>
-        { 
-          this.renderRoutes()        
-        }
-        <Route path="/" exact component={Home}/>
-      </Switch>
+      <main>
+        <Route path="/" component={MainComponent}/>      
       </main>
     )
   }
 }
 
-export default withRouter(MainContainer)
+export default MainContainer
