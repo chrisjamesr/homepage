@@ -6,7 +6,6 @@ const About = ({id}) =>{
   return (
     <div id={id}>
       <h1>ABOUT</h1>
-
       <img src={selfie}/>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
