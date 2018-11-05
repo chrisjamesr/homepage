@@ -18,18 +18,10 @@ import {routes} from '../../lib/routes'
 import ColorComponent from '../ColorComponent'
 
 const components = {
-<<<<<<< Updated upstream
-  home: Home,
-  about: About,
-  projects: ProjectsContainer,
-  contact:Contact    
-=======
     home: Home,
     about: About,
     projects: Projects,
     contact:Contact
-    
->>>>>>> Stashed changes
   }
 
 class MainContainer extends React.Component{
@@ -48,17 +40,7 @@ class MainContainer extends React.Component{
   renderComponents = () => {
     return Object.keys(components).map( (key,i) => {   
       const ComponentName = components[key]
-<<<<<<< Updated upstream
       return <ComponentName id={key} key ={i}/>  
-=======
-      return (
-        <Route 
-          key = {i}
-          path = {"/"+key} 
-          render= {(props)=> <ComponentName id={key} {...this.props}/>}
-        />
-      )  
->>>>>>> Stashed changes
     })
   }
 
@@ -68,12 +50,11 @@ class MainContainer extends React.Component{
 
     return(
       <main>
-<<<<<<< Updated upstream
-        <ElementScroller scrollKey="main"> 
-=======
         <ElementScroller scrollKey="main">
->>>>>>> Stashed changes
-          <Route path="/" component={MainComponent}/>      
+          {
+           // <Route path="/" component={MainComponent}/>      
+          }
+          { this.renderComponents()}
         </ElementScroller>
       </main>
     )
