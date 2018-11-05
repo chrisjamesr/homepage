@@ -5,7 +5,7 @@ const About = ({match}) =>{
   // const imgStyle = {height: 215, paddingTop: "2%"}
   return (
     <div>
-      <h1>ABOUT</h1>
+      <h1>About</h1>
       <img src={selfie}/>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
