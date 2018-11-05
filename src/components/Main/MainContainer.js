@@ -1,9 +1,5 @@
 import React from 'react'
-
-// import { Route, Switch } from 'react-router-dom'
-
-
-
+import { ScrollManager, WindowScroller, ElementScroller } from 'react-scroll-manager'
 import MainComponent from './MainComponent'
 import Home from './Home'
 import About from './About'
@@ -44,17 +40,17 @@ class MainContainer extends React.Component{
   }
 
   render(){
-<<<<<<< HEAD
+
     return <main>{this.renderComponents()}</main>
-=======
+
     return(
       <main>
-        <ScrollContext>
+        <ElementScroller scrollKey="main"> 
           <Route path="/" component={MainComponent}/>      
-        </ScrollContext>
+        </ElementScroller>
       </main>
     )
->>>>>>> e2328c5707054e62070d4cd30fa6c01c409f8b75
+
   }
 
 }
