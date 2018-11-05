@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
+import { ScrollContext } from 'react-router-scroll-4';
 import MainComponent from './MainComponent'
 import Home from './Home'
 import About from './About'
@@ -54,7 +55,9 @@ class MainContainer extends React.Component{
   render(){
     return(
       <main>
-        <Route path="/" component={MainComponent}/>      
+        <ScrollContext>
+          <Route path="/" component={MainComponent}/>      
+        </ScrollContext>
       </main>
     )
   }
