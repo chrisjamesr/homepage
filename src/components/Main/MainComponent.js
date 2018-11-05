@@ -9,32 +9,20 @@ import Contact from './Contact'
 import ColorComponent from '../ColorComponent'
 import '../../styles/Main.scss'
 
-const MainComponent = ({history}) => {
+const MainComponent = (props) => {
 
-  const components = {
-    about: About,
-    projects: Projects,
-    contact:Contact,
-    colors: ColorComponent,
-    home: Home
-  }
+  
 
-  const renderRoutes = () => {
+  renderComponents = (components) => {
     return Object.keys(components).map( (key,i) => {   
       const ComponentName = components[key]
-      return (
-        <Route 
-          key = {i}
-          path = {"/"+key} 
-          component= {ComponentName}
-        />
-      )  
+      return <ComponentName {...props} id={`#${key}`} key = {i}/>  
     })
   }
 
   return(
     <div>
-      { renderRoutes() }
+      { renderComponents(props.components) }
     </div>
   )
 }

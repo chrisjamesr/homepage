@@ -30,7 +30,7 @@ class Contact extends React.Component {
 
   render(){
     return(
-      <div>
+      <div id={this.props.id}>
         <h1>Contact Me</h1>
         <form onSubmit={this.onSubmit} 
               action="https://formspree.io/chrisjames.r@gmail.com"

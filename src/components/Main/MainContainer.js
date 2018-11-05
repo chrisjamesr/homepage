@@ -1,6 +1,9 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
-import { ScrollContext } from 'react-router-scroll-4';
+
+// import { Route, Switch } from 'react-router-dom'
+
+
+
 import MainComponent from './MainComponent'
 import Home from './Home'
 import About from './About'
@@ -14,11 +17,10 @@ import {routes} from '../../lib/routes'
 import ColorComponent from '../ColorComponent'
 
 const components = {
-    about: About,
-    projects: ProjectsContainer,
-    contact:Contact,
-    colors: ColorComponent,
-    home: Home
+  home: Home,
+  about: About,
+  projects: ProjectsContainer,
+  contact:Contact    
   }
 
 class MainContainer extends React.Component{
@@ -34,25 +36,17 @@ class MainContainer extends React.Component{
 
   }  
 
-  componentName(key) {
-    const ComponentName = components[key]
-    return <ComponentName {...props}/>;
-  }
-
-  renderRoutes = () => {
+  renderComponents = () => {
     return Object.keys(components).map( (key,i) => {   
       const ComponentName = components[key]
-      return (
-        <Route 
-          key = {i}
-          path = {"/"+key} 
-          render= {(props)=> <ComponentName {...this.props}/>}
-        />
-      )  
+      return <ComponentName id={key} key ={i}/>  
     })
   }
 
   render(){
+<<<<<<< HEAD
+    return <main>{this.renderComponents()}</main>
+=======
     return(
       <main>
         <ScrollContext>
@@ -60,7 +54,9 @@ class MainContainer extends React.Component{
         </ScrollContext>
       </main>
     )
+>>>>>>> e2328c5707054e62070d4cd30fa6c01c409f8b75
   }
+
 }
 
 export default MainContainer

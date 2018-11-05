@@ -3,16 +3,10 @@ import Project from  './Project'
 import {projects} from '../../lib/projects'
 
 class ProjectsContainer extends React.Component {
-
-
-  // renderProjects = () => {
-  //   debugger
-  // }
-
   render(){
-    
+  
     return(
-      <div>
+      <div id={this.props.id}>
         <h1>Projects</h1>
           {
             projects.map((p,i)=> <Project key={i} project={p} />)
