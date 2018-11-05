@@ -1,14 +1,11 @@
 import React from 'react'
-<<<<<<< Updated upstream
-import { ScrollManager, WindowScroller, ElementScroller } from 'react-scroll-manager'
-=======
 import { Route, Switch } from 'react-router-dom'
 import { ScrollManager, WindowScroller, ElementScroller } from 'react-scroll-manager';
->>>>>>> Stashed changes
+
 import MainComponent from './MainComponent'
 import Home from './Home'
 import About from './About'
-import ProjectsContainer from './ProjectsContainer'
+import Projects from './Projects'
 import Misc from './Misc'
 import Blog from './Blog'
 import Contact from './Contact'
