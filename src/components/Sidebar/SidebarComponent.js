@@ -1,5 +1,5 @@
 import React from 'react' 
-// import { NavLink, Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import "../../styles/Sidebar.scss"
 import twitter from '../../../images/icons/twitter.svg'
 import linkedin from '../../../images/icons/linkedin.svg'
