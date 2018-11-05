@@ -20,7 +20,7 @@ body {
   justify-content: space-between;
   align-items: baseline;
   height: 90vh;
-  padding: 5% 15% 5% 10%;
+  padding: 5% 0 5% 10%;
   h1{
     font-size: 1.6rem;
     letter-spacing: .15rem;
@@ -91,6 +91,7 @@ section {
     width: 100%;  
 
     > div {
+      padding-right: 0;
       // display:flex;
       // width: 100%;
       // flex-direction: column;
