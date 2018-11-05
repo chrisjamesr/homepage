@@ -1,9 +1,9 @@
 import React from 'react'
-<<<<<<< HEAD
-// import { Route, Switch } from 'react-router-dom'
-=======
 
->>>>>>> e2328c5707054e62070d4cd30fa6c01c409f8b75
+// import { Route, Switch } from 'react-router-dom'
+
+
+
 import MainComponent from './MainComponent'
 import Home from './Home'
 import About from './About'
