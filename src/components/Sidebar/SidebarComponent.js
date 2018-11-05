@@ -13,9 +13,9 @@ class SidebarComponent extends React.Component {
           <h1>Chris Rudolph</h1>
         </div>        
         <nav>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>          
-          <a href="#contact">Contact</a>          
+          <NavLink to="#about">About</NavLink>
+          <NavLink to="#projects">Projects</NavLink>          
+          <NavLink to="#contact">Contact</NavLink>          
         </nav>
         <footer id="social">
           <a href="https://www.instagram.com/chrsjr/" target="_blank" rel="noopener noreferrer"><img alt="Instagram Icon"className="icon" src={insta}/></a>

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Blog = () =>{
+const Blog = ({id}) =>{
   return (
-    <div>
+    <div id={id}>
       <h1>BLOG</h1>
       <p>Est sit amet facilisis magna. Pulvinar pellentesque habitant morbi tristique 
       senectus. Urna condimentum mattis pellentesque id. Elit at imperdiet dui accumsan 
