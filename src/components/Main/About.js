@@ -1,10 +1,10 @@
 import React from 'react'
 import selfie from '../../../images/selfie.jpg'
 
-const About = ({match}) =>{
+const About = ({id}) =>{
   // const imgStyle = {height: 215, paddingTop: "2%"}
   return (
-    <div>
+    <div id={id}>
       <h1>ABOUT</h1>
       <img src={selfie}/>
 
