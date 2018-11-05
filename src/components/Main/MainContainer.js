@@ -1,5 +1,9 @@
 import React from 'react'
+<<<<<<< HEAD
 // import { Route, Switch } from 'react-router-dom'
+=======
+
+>>>>>>> e2328c5707054e62070d4cd30fa6c01c409f8b75
 import MainComponent from './MainComponent'
 import Home from './Home'
 import About from './About'
@@ -40,7 +44,17 @@ class MainContainer extends React.Component{
   }
 
   render(){
+<<<<<<< HEAD
     return <main>{this.renderComponents()}</main>
+=======
+    return(
+      <main>
+        <ScrollContext>
+          <Route path="/" component={MainComponent}/>      
+        </ScrollContext>
+      </main>
+    )
+>>>>>>> e2328c5707054e62070d4cd30fa6c01c409f8b75
   }
 
 }
