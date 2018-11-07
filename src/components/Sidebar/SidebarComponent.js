@@ -1,5 +1,6 @@
 import React from 'react' 
 import { NavLink, Link } from 'react-router-dom'
+// import {NavHashLink as NavLink} from'react-router-hash-link'
 import "../../styles/Sidebar.scss"
 import twitter from '../../../images/icons/twitter.svg'
 import linkedin from '../../../images/icons/linkedin.svg'
@@ -13,9 +14,9 @@ class SidebarComponent extends React.Component {
           <h1>Chris Rudolph</h1>
         </div>        
         <nav>
-          <NavLink to="#about">About</NavLink>
-          <NavLink to="#projects">Projects</NavLink>          
-          <NavLink to="#contact">Contact</NavLink>          
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/projects">Projects</NavLink>          
+          <NavLink to="/contact" >Contact</NavLink>          
         </nav>
         <footer id="social">
           <a href="https://www.instagram.com/chrsjr/" target="_blank" rel="noopener noreferrer"><img alt="Instagram Icon"className="icon" src={insta}/></a>
