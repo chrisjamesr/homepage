@@ -1,5 +1,6 @@
 import React from 'react'
 import {Route, Switch} from 'react-router-dom'
+import {NavHashLink as NavLink} from'react-router-hash-link'
 import Home from './Home'
 import About from './About'
 import Projects from './Projects'
@@ -10,19 +11,37 @@ import ColorComponent from '../ColorComponent'
 import '../../styles/Main.scss'
 
 const MainComponent = (props) => {
-
-  
-
-  renderComponents = (components) => {
+  const components = {
+    home: Home,
+    about: About,
+    projects: Projects,
+    contact:Contact
+  }
+  const renderComponents = (components) => {
     return Object.keys(components).map( (key,i) => {   
       const ComponentName = components[key]
-      return <ComponentName {...props} id={`#${key}`} key = {i}/>  
+      return (
+        <ComponentName {...props} id={`${key}`} key={i}/>  
+      )  
+    })
+  }
+
+  const renderRoutes = () => {
+    return Object.keys(components).map( (key,i) => {   
+      const ComponentName = components[key]
+      return (
+        <Route 
+          key = {i}
+          path = {"/"+key} 
+          render= {(props)=> <ComponentName id={key} {...props}/>}
+        />        
+      )  
     })
   }
 
   return(
     <div>
-      { renderComponents(props.components) }
+      { renderRoutes() }
     </div>
   )
 }
