@@ -2,12 +2,11 @@ import React from 'react'
 import selfie from '../../../images/selfie.jpg'
 
 const About = ({id}) =>{
-  // const imgStyle = {height: 215, paddingTop: "2%"}
+  // const imgStyle = {height: 215, paddingTop: "2%"
   return (
     <div id={id}>
       <h1>About</h1>
-      <img src={selfie}/>
-
+ 
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
          sed do eiusmod tempor incididunt ut labore et dolore magna 
          aliqua. Orci phasellus egestas tellus rutrum tellus. In nisl 
