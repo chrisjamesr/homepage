@@ -1,25 +1,24 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
-import { ScrollManager, WindowScroller, ElementScroller } from 'react-scroll-manager';
-
+import { Route, Switch, Redirect } from 'react-router-dom'
+import {withRouter} from 'react-router'
 import MainComponent from './MainComponent'
 import Home from './Home'
-import About from './About'
 import Projects from './Projects'
-import Misc from './Misc'
-import Blog from './Blog'
-import Contact from './Contact'
+// import About from './About'
+// import Misc from './Misc'
+// import Blog from './Blog'
+// import Contact from './Contact'
 import '../../styles/Main.scss'
 import {routes} from '../../lib/routes'
 
 import ColorComponent from '../ColorComponent'
 
-const components = {
-    home: Home,
-    about: About,
-    projects: Projects,
-    contact:Contact
-  }
+// const components = {
+//   home: Home,
+//   about: About,
+//   projects: Projects,
+//   contact:Contact
+// }
 
 class MainContainer extends React.Component{
   constructor(props){
@@ -29,35 +28,39 @@ class MainContainer extends React.Component{
     }
   }
 
-  setPageTitle = () => {
-    debugger
-
-  }  
-
-  renderComponents = () => {
-    return Object.keys(components).map( (key,i) => {   
-      const ComponentName = components[key]
-      return <ComponentName id={key} key ={i}/>  
-    })
+  componentDidMount(){
   }
 
   render(){
-
-    return <main>{this.renderComponents()}</main>
-
     return(
       <main>
-        <ElementScroller scrollKey="main">
-          {
-           // <Route path="/" component={MainComponent}/>      
-          }
-          { this.renderComponents()}
-        </ElementScroller>
+          <Route path="/projects" component={Projects} />
+          <Route exact path="/" component={Home} />          
       </main>
     )
-
   }
-
 }
 
-export default MainContainer
+export default withRouter(MainContainer)
+
+
+  // renderRoutes = () => {
+  //   return Object.keys(components).map( (key,i) => {   
+  //     const ComponentName = components[key]
+  //     return (
+  //       <Route 
+  //         key = {i}
+  //         path = {"/"+key} 
+  //         render= {(props)=> <ComponentName id={key} {...this.props}/>}
+  //       />
+  //     )  
+  //   })
+  // }
+  // renderComponents = (components) => {
+  //   return Object.keys(components).map( (key,i) => {   
+  //     const ComponentName = components[key]
+  //     return (
+  //       <ComponentName {...this.props} id={`${key}`} key={i}/>  
+  //     )  
+  //   })
+  // }
