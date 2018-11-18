@@ -7,7 +7,7 @@ import linkedin from '../../images/icons/iconmonstr-linkedin-4.svg'
 import insta from '../../images/icons/iconmonstr-instagram-4.svg'
 import email from '../../images/icons/iconmonstr-gmail-5.svg'
 import github from '../../images/icons/iconmonstr-github.svg'
-import "../styles/Sidebar.scss"
+
 
 const toggleSocial = ({collapsed}) =>{
   return {collapsed: !collapsed}
