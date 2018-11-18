@@ -1,26 +1,52 @@
+@import 'variables.scss';
+#projects {
+  flex-direction: column;
+}
+.projects-container {
+  margin-top: 2%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow:hidden;
+
+}
+.scroll-container{
+  overflow: auto;
+  // display: flex;
+  // flex-flow: column;
+  // justify-content: flex-start;
+  // align-items: center;
+  padding: 1% 2.5%;
+}
 .project-tile{
-  width: 90%;
+  background-color: white;
+  width: 80%;
+  height: auto;
   border: 1px solid rgb(165,165,175);
-  align-self: center;
-  margin: 5% auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: 0 2% 2%;
+  justify-content: space-around;
+  margin: 3% auto;
+  padding: 1% 2.5% 2.5%;
+  // flex-grow:1;
+
   h2 {
     align-self: center;
-    margin: .5em auto;
+    margin: 0 auto;
   }
   .project-body {
-    padding: 0;
+    padding: 0 2%;
   }
   .project-links {
     display: flex; 
     justify-content: flex-end;
     width: 100%;
-    margin: 0 auto;
+    flex-shrink:0;
+    // height: 15%;
+    // margin: 0 auto;
     a {
-      padding: 0 1%;
+      padding: 0 2%;
     }
   }
 
