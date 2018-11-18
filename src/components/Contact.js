@@ -32,8 +32,9 @@ class Contact extends React.Component {
     return(
       
       <div id="contact" className="section">
+      <span>Contact me on social media!</span>
         <Social/>
-        <span style={{fontSize: "2rem"}}>Or...</span>
+        <span>Or...</span>
         <div className="contact-form"> 
           <form onSubmit={this.onSubmit} 
                 action="https://formspree.io/chrisjames.r@gmail.com"
