@@ -1,7 +1,7 @@
 export const projects = [
   {
     name: "Event List",
-    url: "https://event-list-app.herokuapp.com/events",
+    url: "https://event-list-app.herokuapp.com/",
     repoUrl: "https://github.com/chrisjamesr/event-calendar",
     description: "An event schedule application with React/Redux front end on a Rails 5 API",
   },
@@ -21,5 +21,5 @@ export const projects = [
     url: "",
     repoUrl: "https://github.com/chrisjamesr/atlas-obscura-cli-app",
     description: "CLI application in Ruby. Scrapes AtlasObscura.com and displays the top destinations",
-  }    
+  }
 ]
