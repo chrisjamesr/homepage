@@ -1,6 +1,5 @@
 import React from 'react'
 import {Route, Switch} from 'react-router-dom'
-import {NavHashLink as NavLink} from'react-router-hash-link'
 import Home from './Home'
 import About from './About'
 import Projects from './Projects'

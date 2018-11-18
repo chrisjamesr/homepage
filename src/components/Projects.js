@@ -1,6 +1,6 @@
 import React from 'react'
 import Project from  './Project'
-import {projects} from '../../lib/projects'
+import {projects} from '../lib/projects'
 
 const Projects = ({id}) => {
 
@@ -10,11 +10,13 @@ const Projects = ({id}) => {
   // }
 
 return(
-  <div id={id}>
-    <h1>Projects</h1>
+  <div id="projects" className="section">
+    {/*<h1>Projects</h1>*/}
+    <div className="scroll-container">
       {
         projects.map((p,i)=> <Project key={i} project={p} />)
       }
+    </div>
   </div>
 ) 
 }

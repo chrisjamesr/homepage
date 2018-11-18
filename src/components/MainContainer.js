@@ -1,41 +1,21 @@
 import React from 'react'
-import { Route, Switch, Redirect } from 'react-router-dom'
-import {withRouter} from 'react-router'
-import MainComponent from './MainComponent'
-import Home from './Home'
+import { Route } from 'react-router-dom'
+import { withRouter } from 'react-router'
+import About from './About'
 import Projects from './Projects'
-// import About from './About'
-// import Misc from './Misc'
-// import Blog from './Blog'
-// import Contact from './Contact'
-import '../../styles/Main.scss'
-import {routes} from '../../lib/routes'
-
-import ColorComponent from '../ColorComponent'
-
-// const components = {
-//   home: Home,
-//   about: About,
-//   projects: Projects,
-//   contact:Contact
-// }
+import Contact from './Contact'
+import {routes} from '../lib/routes'
+import '../styles/Main.scss'
 
 class MainContainer extends React.Component{
-  constructor(props){
-    super(props)
-    this.state = {
-      title: ""
-    }
-  }
-
-  componentDidMount(){
-  }
 
   render(){
     return(
       <main>
-          <Route path="/projects" component={Projects} />
-          <Route exact path="/" component={Home} />          
+        <Route exact path="/" component={About}/>
+        <Route path="/projects" component={Projects}/>
+        {<Route path="/contact" component={Contact}/>}
+        {/*<Contact/> */}        
       </main>
     )
   }
@@ -43,6 +23,12 @@ class MainContainer extends React.Component{
 
 export default withRouter(MainContainer)
 
+  // const components = {
+  //   home: Home,
+  //   about: About,
+  //   projects: Projects,
+  //   contact:Contact
+  // }
 
   // renderRoutes = () => {
   //   return Object.keys(components).map( (key,i) => {   
