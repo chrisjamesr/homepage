@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Chivo|Overpass');
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+// @import url('https://fonts.googleapis.com/css?family=Chivo|Overpass');
+// @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lora|Quicksand:400,700');
+
 // $font-color: rgb(119,201,212);
 
 @import 'variables.scss';
@@ -11,7 +13,11 @@ html{
 body {
   height: 100%;  
   margin: 0;
-  font-family: 'Overpass', sans-serif;
+  
+  font-family: 'Quicksand', sans-serif;
+  // font-family: 'Overpass', sans-serif;
+  // font-family: 'Lora', serif;
+  letter-spacing: .05rem;
   // color: rgb(119,201,212);
   color: black;
   background: #C4C4C4;
@@ -34,7 +40,7 @@ body {
 header {
   width: 90%;
   height: 5%;
-  font-family: 'Quicksand', sans-serif;
+  // font-family: 'Quicksand', sans-serif;
   font-weight: 400;
   display: flex;
   flex-direction: row;
@@ -106,9 +112,12 @@ header {
   height: 100%;
   width: 60%;
   flex-direction: column;
-  justify-content: space-evenlygit ;
+  justify-content: space-evenly;
   align-items: center;
   padding: 5% 5%;
+  p {
+    // margin-bottom: 10%;
+  }
 }
 
 footer {
@@ -161,6 +170,9 @@ main > div {
   height: 20px;
 }
 
+.content, p {
+  font-family: 'Lora', serif;
+}
 // @media (max-width: #{$break-point-lg-tablet}){
 //   #app > div {
 //     flex-flow: row wrap;
