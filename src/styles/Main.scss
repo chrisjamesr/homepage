@@ -1,15 +1,22 @@
-main {
-  > div {
-    margin-bottom: 10%;
-    padding-right: 25%;
-  }
+@import 'variables.scss';
+main > div{
   h1{
-    border-bottom: 2.5px solid rgb(119,201,212);
+    // border-bottom: 2.5px solid rgb(119,201,212);
+    margin:1% auto;
   }
   p {
     color: black;
   }
+
+  // contact form
+  .contact-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   form {
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -34,25 +41,80 @@ main {
       }
     }
     input[type="submit"] {
-        border: 1px solid;
-        border-radius: 30px;
-        align-self: center;
-        margin-top: 5%;
-        padding: 5px;
-        width:30%;
-        font-size: 1em;
-        color: rgb(119,201,212);
-        background-color: #ECF0F2;
-      }
+      border: 1px solid;
+      border-radius: 30px;
+      align-self: center;
+      margin-top: 5%;
+      padding: 5px;
+      width:30%;
+      font-size: 1em;
+      // color: rgb(119,201,212);
+      // background-color: #ECF0F2;
+    }
     input[type="submit"]:hover {
       background-color: #ECF0F2;
       box-shadow: 5px 5px 2px 1px rgba(165,165,175, .3);
     }
   }
+  // image
+  .img-container {
+    // border: 1px solid black;
+    border-radius: 50%;
+    height: 215px;
+    overflow: hidden;    
+    z-index:2;
+    margin-top: 2.5%;
+  }
+  img {
+    height: 215px;
+    z-index:1;
+    // transform: translate(10px, 10px);
+  }
 }
-img {
-  float:right;
-  height: 215px;
-  padding-top: 2%;
-  padding-left: 1%;
+
+.scroll-container {
+  margin-bottom: 2.5%;
 }
+.section > * {
+  // margin-bottom: 5%;
+}
+
+// footer {
+
+
+// }
+
+@media (max-width: #{$break-point-lg-tablet}){
+  main {
+    width: 100%;  
+    > div {
+      padding-right: 0;
+    }
+    img {
+      height: 150px;
+      float: right;
+      padding-left: 5% ;
+    }
+  }
+} 
+
+@media (max-width: #{$break-point-phone}){
+  main {
+    width: 100%;  
+    // border-top: 2.5px solid rgb(119,201,212);
+    > div {
+      // display:flex;
+      // width: 100%;
+      // flex-direction: column;
+      // justify-content: flex-start;
+      // align-items:stretch;
+      // flex-grow:1;
+    }
+    img {
+      height: 100px;
+      margin: 0;
+      // align-self: center;
+    }
+  }
+}
+
