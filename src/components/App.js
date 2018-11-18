@@ -1,11 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import {ResizeProvider} from './WindowContext'
-import SidebarComponent from './Sidebar/SidebarComponent'
 import Header from './Header'
 import Footer from './Footer'
 import MainContainer from './MainContainer'
-import SlideBar from './SlideBar'
 import "../styles/App.scss"
 
 class App extends React.Component {
