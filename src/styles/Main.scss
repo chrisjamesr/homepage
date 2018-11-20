@@ -1,6 +1,4 @@
 @import 'variables.scss';
-
-
   // contact form
 .contact-form{
   width: 100%;
@@ -55,3 +53,10 @@ form {
 .scroll-container {
   margin-bottom: 2.5%;
 }
+
+@media (max-width: #{$break-point-lg-tablet}){
+  form > div {
+    justify-content: space-between;
+  }
+}
+
