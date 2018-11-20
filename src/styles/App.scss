@@ -192,12 +192,11 @@ main > div {
   border-radius: 50%;
   height: 215px;
   overflow: hidden;    
-  z-index:2;
   margin-top: 2.5%;
 }
 img {
   height: 215px;
-  z-index:1;
+  
 }
 
 @media (max-width: #{$break-point-lg-tablet}){
@@ -253,9 +252,16 @@ img {
   }
 }
   
-@media (max-width:   #{$break-point-phone}){
+@media (max-width: #{$break-point-phone}){
   #social {
     justify-content: space-between;
+  }
+  .section{
+    width: 100%;
+  }
+  .scroll-container{
+    padding:0;
+    width: 100%;
   }
   .icon {
     // height: 30px;
@@ -264,12 +270,49 @@ img {
     border-radius: 50%;
     height: 100px;
     overflow: hidden;    
-    z-index:2;
     margin-top: 2.5%;
   }
   img {
     height: 100px;
-    z-index:1;
   }
 }
 
+@media (max-height: 560px){
+  #contact{
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    span {
+      display: none;
+    }
+  }
+  #social{
+    flex-direction: column;
+    justify-content: space-around;
+    width: auto;
+    height: 100%;
+  }
+   .img-container {
+    border-radius: 50%;
+    height: 150px;
+    overflow: hidden;    
+    margin-top: 2.5%;
+  }
+  img {
+    height: 150px;
+  }
+}
+
+@media (max-height: 450px){
+  .section{
+    padding-top:0;
+  }
+   .img-container {
+    border-radius: 50%;
+    height: 90px;
+    overflow: hidden;    
+  }
+  img {
+    height: 90px;
+  }
+}
