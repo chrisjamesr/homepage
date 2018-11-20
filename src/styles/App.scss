@@ -281,10 +281,11 @@ img {
   #contact{
     flex-flow: row;
     justify-content: flex-start;
-    align-items: baseline;
+    align-items: flex-start;
     span {
       display: none;
     }
+    width: 90%;
   }
   #social{
     flex-direction: column;
