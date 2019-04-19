@@ -8,7 +8,7 @@ const About = () => {
       <div className="img-container">
         <img src={selfie}/>
       </div>
-      <p style={{textIndent: 45, lineHeight: 1.5}}>
+      <p id="bio">
         My name is <a href="https://www.linkedin.com/in/chris-j-rudolph"
           target="_blank" rel="noopener noreferrer" className="link">Chris Rudolph</a>. 
           I'm a full-stack developer from New York City. I have experience working with 
